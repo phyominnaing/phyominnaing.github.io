@@ -1,146 +1,201 @@
-<!DOCTYPE html>
+/* File: index.html */
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phyo Min Naing | Civil Engineer</title>
-  <style>
-    :root {
-      --primary-color: #1e3d59;
-      --secondary-color: #f5f5f5;
-      --accent-color: #ff6b6b;
-      --text-color: #333;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--secondary-color);
-      color: var(--text-color);
-    }
-    header {
-      background: var(--primary-color);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.2em;
-    }
-    nav {
-      background: #fff;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    nav a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: var(--accent-color);
-    }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    section h2 {
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 5px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      background: #eee;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Phyo Min Naing — Civil Engineer</title>
+  <meta name="description" content="Portfolio of Phyo Min Naing — Fresh Graduate Civil Engineer" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Theme color for mobile -->
+  <meta name="theme-color" content="#1f2a44">
 </head>
 <body>
 
-  <header>
-    <h1>Phyo Min Naing</h1>
-    <p>BE (Civil Engineering) Graduate | Structural Analysis & Seismic Assessment</p>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Go to top">
+        <img src="/mnt/data/9B9C13FE-7234-4E30-8D36-EC76E03D3915.jpeg" alt="Phyo Min Naing" class="brand-img">
+        <span class="brand-text">Phyo Min Naing</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#about" data-target="about">About</a></li>
+          <li><a href="#experience" data-target="experience">Experience</a></li>
+          <li><a href="#education" data-target="education">Education</a></li>
+          <li><a href="#skills" data-target="skills">Skills</a></li>
+          <li><a href="#contact" data-target="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button id="theme-toggle" class="btn icon-btn" aria-pressed="false" aria-label="Toggle dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+        </button>
+
+        <button id="hamburger" class="btn hamburger" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a motivated Civil Engineering graduate with strong academic knowledge and hands-on experience in structural modeling, analysis, and earthquake-resistant design. 
-      I enjoy tackling real-world problems with practical solutions and continuously learning to improve my technical and soft skills.
-    </p>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>BE (Civil Engineering)</strong> – West Yangon Technological University</li>
-      <li>Thesis: Seismic Capacity Assessment of an Existing Building in North Dagon Township</li>
-      <li>Seminar: Structural stability and nonlinear time history analysis (NTHA)</li>
-      <li>Graduation Year: [Insert Year]</li>
+  <!-- Mobile navigation overlay -->
+  <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list" id="mobile-nav-list">
+      <li><a href="#about" data-target="about">About</a></li>
+      <li><a href="#experience" data-target="experience">Experience</a></li>
+      <li><a href="#education" data-target="education">Education</a></li>
+      <li><a href="#skills" data-target="skills">Skills</a></li>
+      <li><a href="#contact" data-target="contact">Contact</a></li>
     </ul>
-  </section>
+  </div>
 
-  <section id="projects">
-    <h2>Projects & Experience</h2>
-    <ul>
-      <li>Seismic Performance Evaluation using ETABS and matched ground motions (ASCE 41-13)</li>
-      <li>Hands-on experience in reinforced concrete construction and bar scheduling</li>
-      <li>ETABS, SAFE modeling for thesis-based nonlinear analysis</li>
-      <li>Presented civil seminar (Part 1: Stability Analysis) at W.Y.T.U. – July 2025</li>
-    </ul>
-  </section>
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="hero" role="region" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <img src="/mnt/data/9B9C13FE-7234-4E30-8D36-EC76E03D3915.jpeg" alt="Phyo Min Naing portrait" class="hero-photo">
+          <div class="hero-text">
+            <h1 id="hero-title">Phyo Min Naing</h1>
+            <p class="muted">Fresh Graduate • Civil Engineer</p>
+            <p class="lead">I’m a motivated civil engineer with experience in site engineering, structural analysis, quantity estimation, and drafting using ETABS, AutoCAD, and Revit.</p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#contact" data-target="contact">Get in touch</a>
+              <a class="btn ghost" href="#experience" data-target="experience">View experience</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <h4>Education</h4>
+            <p>B.E. (Civil) — West Yangon Technological University (2017–2025)</p>
+          </div>
+          <div class="stat">
+            <h4>Skills</h4>
+            <p>ETABS • AutoCAD • Revit (Basic) • Estimation</p>
+          </div>
+          <div class="stat">
+            <h4>Languages</h4>
+            <p>Myanmar • English (Intermediate)</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Software: ETABS, SAFE, AutoCAD, Microsoft Excel</li>
-      <li>Design Codes: ACI 318, ASCE 41-13</li>
-      <li>Languages: English, Myanmar</li>
-    </ul>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About</h2>
+        <p class="lead">Highly motivated Fresh Graduate Civil Engineer proficient in technical drafting, precise quantity surveying, and structural modeling. Seeking to leverage strong foundational knowledge in construction cost estimation and software like AutoCAD, Revit, and ETABS to contribute effectively to design and construction projects.</p>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/phyominnaing" target="_blank">linkedin.com/in/phyominnaing</a></p>
-    <p>YouTube: <a href="https://www.youtube.com/@MyanmarStoryAdventures" target="_blank">Myanmar Story Adventures</a></p>
-  </section>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section bg-soft" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title">Work Experience</h2>
 
-  <footer>
-    &copy; 2025 Phyo Min Naing. All rights reserved.
+        <article class="card">
+          <h3>Intern — Site Engineer <span class="muted"> (2 months)</span></h3>
+          <p class="muted">MKT Construction Company Limited</p>
+          <ul>
+            <li>Assisted supervision of ongoing construction works at project site.</li>
+            <li>Checked reinforcement works and concrete placement for structural members.</li>
+            <li>Prepared daily site progress reports under guidance of site engineers.</li>
+            <li>Gained experience in quantity estimation and coordination with subcontractors.</li>
+            <li>Observed and learned construction safety practices and site management.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Thesis Research — Structural Engineering <span class="muted">(Mar — Sep 2025)</span></h3>
+          <ul>
+            <li>Conducted seismic performance evaluation of an existing RC building.</li>
+            <li>Developed structural models using ETABS for seismic capacity assessment.</li>
+            <li>Performed stability and time-history analysis under different earthquake load cases.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="container">
+        <h2 id="education-title">Education</h2>
+        <div class="card grid-education">
+          <div>
+            <h3>Bachelor of Engineering (Civil)</h3>
+            <p class="muted">West Yangon Technological University</p>
+          </div>
+          <div class="edu-years">2017 — 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section bg-soft" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h4>Structural Analysis & Design</h4>
+            <p>ETABS • SAFE • Tekla</p>
+          </div>
+          <div class="skill-card">
+            <h4>Drafting & Modeling</h4>
+            <p>AutoCAD • Revit (Basic)</p>
+          </div>
+          <div class="skill-card">
+            <h4>Office & Estimation</h4>
+            <p>Word • Excel • PowerPoint • RC & Steel Estimation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <h2 id="contact-title">Contact</h2>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:0xphyominnaing@gmail.com">0xphyominnaing@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+959660205395">09660205395</a>, <a href="tel:+959971199918">09971199918</a></li>
+            <li><strong>Address:</strong> Zaya Thukha St, Thamine(2) Ward, Mayangone Township</li>
+            <li><strong>Website:</strong> <a href="https://phyominaing.xyz" target="_blank" rel="noopener">phyominaing.xyz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Interests</h3>
+          <ul class="tags">
+            <li>Structural Analysis</li>
+            <li>Cost Estimation</li>
+            <li>Technical Drafting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Phyo Min Naing — Built with care • <a href="#hero">Back to top</a></p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
